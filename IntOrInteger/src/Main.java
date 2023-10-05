@@ -11,11 +11,13 @@ public class Main {
         for(int i = 0; i<65536; i++){
             Character symbol;
             symbol = (char) i;
-            //if(Character.UnicodeBlock.of(symbol.charValue()).equals(Character.UnicodeBlock.CYRILLIC)); {
-            //    }
-            if(Character.UnicodeBlock.of(symbol).equals(Character.UnicodeBlock.CYRILLIC)) {
-                System.out.println(i + " - " + symbol);
+            if(symbol == 'Ё' || symbol == 'ё'){
+                System.out.println(symbol + " - " + i);
+            }
+            if(symbol >= 'А' && symbol <= 'я') {
+                System.out.println(symbol + " - " + i);
+                }
             }
         }
     }
-}
+
